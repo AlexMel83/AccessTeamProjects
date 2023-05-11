@@ -87,7 +87,7 @@ body {
    height: 550px;
    top: calc(50% - 550px/2);
    left: calc(50% - 900px/2);
-   position: fixed;
+   position: absolute;
    display: flex;
    justify-content: center;
 }
@@ -198,10 +198,6 @@ input[type="password"] {
    padding-left: 35px;
    cursor: pointer;
    font-size: 18px;
-   -webkit-user-select: none;
-   -moz-user-select: none;
-   -ms-user-select: none;
-   user-select: none;
    color: #666;
 }
 
@@ -294,109 +290,113 @@ input[type="password"] {
 
    /* TABLET */
    .modalwindow {
-      width: 450px;
-      height: 275px;
-      top: calc(50% - 275px/2);
-      left: calc(50% - 450px/2);
+      width: 700px;
+      height: 428px;
+      top: calc(50% - 428px/2);
+      left: calc(50% - 700px/2);
    }
 
    .leftwindow {
-      border-radius: 10px 0 0 10px;
+      border-radius: 7px 0 0 7px;
    }
 
    .logo {
-      width: 20px;
-      height: 22px;
+      width: 31px;
+      height: 32px;
       position: absolute;
-      top: 5px;
-      left: 5px;
+      top: 8px;
+      left: 8px;
    }
 
    .left__title {
-      font-size: 25px;
+      font-size: 39px;
       border-top: solid 2px white;
       border-bottom: solid 2px white;
-      margin-top: -7px;
+      margin-top: -11px;
    }
 
    .left__description {
-      margin: 12px 3px;
-      font-size: 8px;
-      padding: 0 12px;
+      margin: 19px 20px;
+      font-size: 11px;
    }
 
    .rightwindow {
-      border-radius: 0 5px 5px 0;
-      font-size: 9px;
-      padding: 40px 0 0 8px;
+      border-radius: 0 7px 7px 0;
+      font-size: 12px;
+      padding: 62px 0 0 12px;
    }
 
    #login-tab,
    #sign-tab {
-      font-size: 10px;
+      font-size: 15px;
    }
 
    input[type="text"],
    input[type="password"] {
-      height: 15px;
-      font-size: 8px;
-      margin-top: 18px;
+      height: 23px;
+      font-size: 13px;
+      margin-top: 28px;
    }
 
    .remember {
-      margin-top: 11px;
-      padding-left: 18px;
-      font-size: 9px;
+      margin-top: 17px;
+      padding-left: 28px;
+      font-size: 14px;
    }
 
    .highload2 {
-      top: 3px;
-      left: 5px;
-      height: 8px;
-      width: 8px;
+      top: 5px;
+      left: 7px;
+      height: 12px;
+      width: 12px;
    }
 
    .remember .highload2:after {
-      left: 2px;
-      top: -4px;
-      width: 5px;
-      height: 8px;
+      left: 3px;
+      top: -6px;
+      width: 7px;
+      height: 12px;
       border-width: 0 2px 2px 0;
    }
 
    .button {
-      width: 55px;
-      height: 15px;
-      border-radius: 8px;
-      font-size: 8px;
+      width: 86px;
+      height: 24px;
+      border-radius: 12px;
+      font-size: 12px;
    }
 
    #signup {
-      margin-top: 12px;
+      margin-top: 18px;
    }
 
    .forgot {
       border-bottom: 2px solid #83c7ba;
-      margin-top: 9px;
-      font-size: 8px;
-      left: -5px;
+      margin-top: 14px;
+      font-size: 12px;
+      left: -7px;
    }
 
    .arrow {
-      width: 8px;
-      height: 8px;
-      top: 11px;
-      right: 5px;
+      width: 12px;
+      height: 12px;
+      top: 16px;
+      right: 7px;
    }
 }
 
 @media (max-width: 767px) {
 
    /* MOBILE */
+   body {
+      height: 100vh;
+      overflow-y: auto;
+   }
+
    .modalwindow {
       width: 90%;
-      height: 100%;
-      top: 10%;
+      height: 90%;
+      top: 5%;
       left: 5%;
       flex-direction: column;
    }
@@ -404,7 +404,7 @@ input[type="password"] {
    .leftwindow {
       width: 100%;
       background: linear-gradient(#9ae1cb, #71b4a8);
-      border-radius: 10px 0 0 10px;
+      border-radius: 10px 10px 0 0;
    }
 
    .logo {
@@ -423,5 +423,12 @@ input[type="password"] {
    .rightwindow {
       width: 100%;
       padding: 50px 0 40px 15px;
+      border-radius: 0 0 10px 10px;
+   }
+
+   input[type="text"],
+   input[type="password"] {
+      height: 25px;
+      margin-top: 15px;
    }
 }
